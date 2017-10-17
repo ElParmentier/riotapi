@@ -1,0 +1,17 @@
+{
+  "name": "riotapi",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "John Doe <johndoe@example.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="bower_components/vue/dist/vue.js"></script>
+  <script src="bower_components/vue-resource/dist/vue-resource.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+</head>
+  <body>
+    <div id="baseRiotApp">
+      {{userId}}
+      <riot-app v-bind:data="'message'"></riot-app>
+      <input type="text" v-model="summonerName"></input>
+      <button v-on:click="retrieveSummoner">Récupérer les données d'invocateur</button>
+      <button v-on:click="retrieveRunes" v-if="userId !== ''">Récupérer les runes de l'invocateur</button>
+      <button v-on:click="retrieveMatches" v-if="userId !== ''">Voir l'historique des matchs</button>
+      <ul v-if="runePages">
+        <li v-for="item in runePages">
+          {{item.name}}
+        </li>
+      </ul>
+    <ul v-if="matches">
+      <li v-for="item in matches">
+        {{item.champion}}
+      </li>
+    </ul>
+  </div>
+    <script src="src/baseRiotApp/base-riot-app.component.js"></script>
+    <script src="src/baseRiotApp/riot-app.js"></script>
+  </body>
+</html>
