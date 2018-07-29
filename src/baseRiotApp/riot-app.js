@@ -3,7 +3,7 @@ const baseRiotApp = new Vue({
   data: {
     url: 'euw1.api.riotgames.com',
     userId: '',
-    summonerName: 'CrazyFranceBoy',
+    summonerName: 'Froggen',
     route: `lol/summoner/v3/summoners/by-name`,
     runesRoute: `lol/platform/v3/runes/by-summoner`,
     matchesRoute: 'lol/match/v3/matchlists/by-account',
@@ -11,8 +11,8 @@ const baseRiotApp = new Vue({
     championList: [],
     runePages: [],
     matches: [],
-    apiKey: 'RGAPI-d7c2bed4-0536-4866-bfa4-88327a93f1c0',
-    message: 'WELCOME TO MY PROJECT',
+    apiKey: 'NULL',
+    message: '',
   },
   methods: {
     retrieveSummoner: function() {
