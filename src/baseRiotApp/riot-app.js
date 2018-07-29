@@ -44,7 +44,7 @@ const baseRiotApp = new Vue({
         .catch(error => console.log(error));
     },
     getChampionList: function() {
-      const route = 'https://euw1.api.riotgames.com/lol/static-data/v3/champions?locale=en_US&dataById=false&api_key=RGAPI-d7c2bed4-0536-4866-bfa4-88327a93f1c0';
+      const route = 'https://euw1.api.riotgames.com/lol/static-data/v3/champions?locale=en_US&dataById=false&api_key=${this.apiKey}';
       return this.$http.get(route)
         // .then(response => JSON.parse(response));
         .then(response => response);
